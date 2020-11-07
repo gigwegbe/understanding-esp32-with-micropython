@@ -1,6 +1,6 @@
 # Setting Up Micropython Esp32
 
-![Esp32](/asset/esp32.jpg)
+![Esp32](/asset/esp32a.jpg)
 
  ### Setting Up Your Computer 
 In order to use the Esp32 on machine(Windows, Linux or Mac) we need to first install a driver that allows the computer to recognize the microcontroller as a serial device. Follow the link to download the driver. - [cp210x](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
