@@ -57,12 +57,12 @@ Hard resetting via RTS pin...
 or 
 
 ```
-esptool.py --chip esp32 --port cu.SLAB_USBtoUART erase_flash
+esptool.py --chip esp32 --port /dev/cu.SLAB_USBtoUART erase_flash
 ```
 
 Install the firmware 
 ```
-esptool.py --chip esp32 --port cu.SLAB_USBtoUART --baud 460800 write_flash -z 0x1000 esp32-idf3-20180511-v1.9.4.bin
+esptool.py --chip esp32 --port /dev/cu.SLAB_USBtoUART --baud 460800 write_flash -z 0x1000 esp32-idf3-20180511-v1.9.4.bin
 ``` 
 
 
@@ -74,5 +74,37 @@ esptool.py --chip esp32 --port cu.SLAB_USBtoUART --baud 460800 write_flash -z 0x
  ```
 For example
  ```
- (env) $ rshell --port cu.SLAB_USBtoUART
+ (env) $ rshell --port /dev/cu.SLAB_USBtoUART
  ```
+ Result 
+ ```
+ Using buffer-size of 32
+Connecting to /dev/cu.SLAB_USBtoUART (buffer-size 32)...
+Trying to connect to REPL  connected
+Testing if ubinascii.unhexlify exists ... Y
+Retrieving root directories ... /boot.py/
+Setting time ... Nov 07, 2020 10:25:34
+Evaluating board_name ... pyboard
+Retrieving time epoch ... Jan 01, 2000
+Welcome to rshell. Use Control-D (or the exit command) to exit rshell.
+/Users/george/Documents/embedded_python/understanding-esp32-with-micropython/01_Setting_Up_Micropython_Esp32> 
+ ```
+
+To use the REPL enter the `repl` command: 
+```
+ /Users/george/Documents/embedded_python/understanding-esp32-with-micropython/01_Setting_Up_Micropython_Esp32> repl
+Entering REPL. Use Control-X to exit.
+>
+MicroPython v1.9.4 on 2018-05-11; ESP32 module with ESP32
+Type "help()" for more information.
+>>> 
+>>> 
+```
+
+Test the Python interpreter
+
+```
+>>> print("Hello Embedded Python - MicroPython!")
+Hello Embedded Python - MicroPython!
+>>> 
+```
