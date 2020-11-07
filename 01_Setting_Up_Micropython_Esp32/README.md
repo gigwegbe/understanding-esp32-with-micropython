@@ -11,22 +11,22 @@ $ cd Setting_Up_Micropython_Esp32
 
 We proceed to create a python virtual environment and then install the necessary packages in the `requirements.txt` file. Follow the instruction [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) to setup virtual environment. 
 
-Create  a virtual environment. 
+Create  a virtual environment:
 
 ```
 $ python3 -m venv env
 ```
 
-Activate the environment.
+Activate the environment:
 ```
 $ source env/bin/activate
 ```
-Install the packages in the virtual environment using the `requirements file`.
+Install the packages in the virtual environment using the `requirements file`:
 ```
 (env) $ pip3 install -r requirements.txt
 ```
 
-To deactivate the virtual environment use the `deactivate` command
+To deactivate the virtual environment use the `deactivate` command:
 ```
 deactivate
 ```
@@ -34,11 +34,11 @@ deactivate
  ### Flashing Micropython with esptool.py
 To use Micropython we need to install the firmware on Esp32 board. Download the firmware [here](https://micropython.org/download/) in our case is `esp32-idf3-20180511-v1.9.4.bin`. Move it into the current directory. We then proceed to use `esptool.py` to flash the firmware onto the board. 
 
-Flash the board to clean state(press the reset button)
+Flash the board to clean state(press the reset button):
 ```
 (env) $ esptool.py erase_flash 
 ```
-Result from flashing the board
+Result from flashing the board:
 ```
 esptool.py v3.0
 Serial port /dev/cu.SLAB_USBtoUART
@@ -60,7 +60,7 @@ or
 esptool.py --chip esp32 --port /dev/cu.SLAB_USBtoUART erase_flash
 ```
 
-Install the firmware 
+Install the firmware:
 ```
 esptool.py --chip esp32 --port /dev/cu.SLAB_USBtoUART --baud 460800 write_flash -z 0x1000 esp32-idf3-20180511-v1.9.4.bin
 ``` 
@@ -68,15 +68,15 @@ esptool.py --chip esp32 --port /dev/cu.SLAB_USBtoUART --baud 460800 write_flash 
 
  ### Using Micropython REPL with rshell
  Now we have the Micropython on the board, we can connect to the Read-Eval-Print-Loop(REPL). This is the standard Python prompt that you are similar to regular Python interpreter but this time it is on the board rather than computer. 
- To use REPL with rshell
+ To use REPL with rshell:
  ```
  (env) $ rshell --port <your board serial port name>
  ```
-For example
+For example:
  ```
  (env) $ rshell --port /dev/cu.SLAB_USBtoUART
  ```
- Result 
+ Result:
  ```
  Using buffer-size of 32
 Connecting to /dev/cu.SLAB_USBtoUART (buffer-size 32)...
@@ -101,7 +101,7 @@ Type "help()" for more information.
 >>> 
 ```
 
-Test the Python interpreter
+Test the Python interpreter:
 
 ```
 >>> print("Hello Embedded Python - MicroPython!")
