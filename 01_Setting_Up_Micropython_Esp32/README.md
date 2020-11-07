@@ -34,17 +34,35 @@ deactivate
  ### Flashing Micropython with esptool.py
 To use Micropython we need to install the firmware on Esp32 board. Download the firmware [here](https://micropython.org/download/) in our case is `esp32-idf3-20180511-v1.9.4.bin`. Move it into the current directory. We then proceed to use `esptool.py` to flash the firmware onto the board. 
 
-Flash the board to clean state 
+Flash the board to clean state(press the reset button)
 ```
 (env) $ esptool.py erase_flash 
 ```
 Result from flashing the board
 ```
-esptool.py --chip esp32 --port /dev/ttyUSB0 erase_flash
+esptool.py v3.0
+Serial port /dev/cu.SLAB_USBtoUART
+Connecting........_
+Chip is ESP32-D0WDQ6 (revision 1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 3c:71:bf:8c:0d:20
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash (this may take a while)...
+Chip erase completed successfully in 6.2s
+Hard resetting via RTS pin...
 ```
+or 
+
+```
+esptool.py --chip esp32 --port cu.SLAB_USBtoUART erase_flash
+```
+
 Install the firmware 
 ```
-esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 esp32-idf3-20180511-v1.9.4.bin
+esptool.py --chip esp32 --port cu.SLAB_USBtoUART --baud 460800 write_flash -z 0x1000 esp32-idf3-20180511-v1.9.4.bin
 ``` 
 
 
@@ -55,6 +73,6 @@ esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 
  (env) $ rshell --port <your board serial port name>
  ```
 For example
-```
- (env) $ rshell --port /dev/ttyUSB0
+ ```
+ (env) $ rshell --port cu.SLAB_USBtoUART
  ```
