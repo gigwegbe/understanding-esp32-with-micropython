@@ -31,4 +31,7 @@ To deactivate the virtual environment use the `deactivate` command
 deactivate
 ```
 
+ ### Flashing Micropython with esptool.py
 
+
+ ### Using Micropython REPL with rshell
