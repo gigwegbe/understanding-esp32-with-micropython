@@ -1,12 +1,12 @@
 # Interfacing with OLED Display
 
-![Esp32](/asset/esp32_display.jpg)
+![Esp32](/asset/mpu6050.jpg)
 
  ### Setting Up Your Computer
-Assuming you have done the necessary setup [here](https://github.com/gigwegbe/understanding-esp32-with-micropython/tree/main/01_Setting_Up_Micropython_Esp32). Move the `13306.py` to your current directory. 
-
+Assuming you have done the necessary setup [here](https://github.com/gigwegbe/understanding-esp32-with-micropython/tree/main/01_Setting_Up_Micropython_Esp32). 
 ### Download the mpu6050 library 
-We need to download the necessary Accelerometer/Gyroscope driver `` from [here](https://github.com/adamjezek98/MPU6050-ESP8266-MicroPython). 
+We need to download the necessary Accelerometer/Gyroscope driver `mpu6050.py` from [here](https://github.com/adamjezek98/MPU6050-ESP8266-MicroPython). Move the `mpu6050.py` to your current directory. 
+
 
 ### Uploading driver to Esp32 board
 In order to use the driver we need to move it to the Esp32 board using `ampy` library. 
