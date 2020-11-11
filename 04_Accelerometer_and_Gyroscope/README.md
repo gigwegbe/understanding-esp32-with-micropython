@@ -47,12 +47,13 @@ Type "help()" for more information.
 Import the necessary libraries
 ```
 from machine import I2C, Pin
+import mpu6050
 ```
 Select the pins associated with the accelerometer using I2C protocol. 
 SCL connected to pin 5, SDA to pin 4 example usage: 
 ```
->>>i2c = I2C(scl=Pin(5), sda=Pin(4))
+>>>i2c = I2C(scl=Pin(4), sda=Pin(5))
 >>>accelerometer = mpu6050.accel(i2c)
 >>>accelerometer.get_values()
-{'GyZ': -235, 'GyY': 296, 'GyX': 16, 'Tmp': 26.64764, 'AcZ': -1552, 'AcY': -412, 'AcX': 16892}
+'GyZ': 604, 'GyY': 216, 'GyX': -454, 'Tmp': 33.98882, 'AcZ': 4596, 'AcY': 13904, 'AcX': -5888}
 ```
