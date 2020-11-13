@@ -10,12 +10,14 @@ Walkthrough on how to use micropython on ESP32 devices.
 - [ ] - Interface with motor Servo 
 - [ ] - Interface with camera
 - [ ] - Interface with microphone 
-- [ ] - Interface with PIR
 - [ ] - Interface with a relay 
 - [ ] - Interface with SD Card
-- [ ] - Interface with PIR
+- [ ] - Interface with PIR on board
+- [ ] - Interface with PIR external 
 - [ ] - Interface with GSM Module(SIM868)
 - [ ] - Interface with Vibration Sensor(LOG-Sensor ver:1.5)
-- [ ] - Interface with PIR
 - [ ] - Interface with Sound Sensor
 - [ ] - Interface with Small Electric Pump 
+```
+------------------------------------------------------------------------------
+```
