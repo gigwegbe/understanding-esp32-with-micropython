@@ -42,21 +42,20 @@ Type "help()" for more information.
 >>> 
 
 ```
-### Test Accelerometer/Gyroscope
+### Test UltraSonic Sensor
 
 Import the necessary libraries
 ```
 from machine import I2C, Pin
 from hcsr04 import HCSR04
 ```
-Connect trigger pin and echo to pin 16 and 5 respectively.
-usage: 
+Connect trigger pin and echo to pin 16 and 5 respectively. 
 ```
 >>>sensor = HCSR04(trigger_pin=16, echo_pin=5)
 >>>distance = sensor.distance_cm()
 >>>print('Distance:', distance, 'cm')
 ```
 Result: 
-```
-
+```>>> print('Distance:', distance, 'cm')
+Distance: 2.886598 cm
 ```
