@@ -1,4 +1,4 @@
-# Interfacing with OLED Display
+# Interfacing with Accelerator and Gyroscope
 
 ![Esp32](/asset/mpu6050.png)
 

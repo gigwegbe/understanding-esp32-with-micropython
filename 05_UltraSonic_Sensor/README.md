@@ -1,4 +1,4 @@
-# Interfacing with OLED Display
+# Interfacing with Ultrasonic Sensor
 
 ![Esp32](/asset/hc_sro4.jpg)
 
